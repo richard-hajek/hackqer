@@ -1,4 +1,3 @@
-const secret = require('./secret.js');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
@@ -12,5 +11,5 @@ client.on('message', msg => {
   }
 });
 
-console.log("Using token: " + secret.token)
-client.login(secret.token);
+console.log("Using token: " + process.env.BOT_TOKEN)
+client.login(process.env.BOT_TOKEN);
